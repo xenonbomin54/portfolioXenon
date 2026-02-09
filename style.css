@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+}
+
+#topDiv{
+    background-color: rgb(68, 68, 68);
+    padding: 10px;
+}
+
+#mTitle {
+    font-size: 30px;
+    font-weight: 600px;
+}
