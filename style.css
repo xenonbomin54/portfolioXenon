@@ -1,13 +1,18 @@
 body {
     margin: 0;
+    background-color: rgb(15, 15, 15);
 }
 
 #topDiv{
-    background-color: rgb(68, 68, 68);
-    padding: 10px;
+    background-color: rgb(29, 29, 29);
+    padding: 20px;
 }
 
 #mTitle {
-    font-size: 30px;
-    font-weight: 600px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 40px;
+    color: white;
 }
