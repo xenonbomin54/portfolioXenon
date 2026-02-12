@@ -5,7 +5,7 @@ body {
 
 #topDiv{
     background-color: rgb(29, 29, 29);
-    padding: 20px;
+    padding: calc((2vw + 3vh) / 4);
 }
 
 #mTitle {
@@ -13,6 +13,6 @@ body {
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-size: 40px;
+    font-size: calc((2vw + 3vh) / 2);
     color: white;
 }
