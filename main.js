@@ -1,7 +1,7 @@
 const container = document.getElementById('cardBox');
 
 let divBox = `
-        <div class="divs" style="background-color:white; width: calc(200px + 15vw + 4vh); height: calc(150px + 15vw + 4vh); max-width: 90%; margin:0 auto; margin-top:10vh;">
+        <div class="divs" style="background-color:white; width: calc(200px + 15vw + 4vh); height: calc(150px + 15vw + 4vh); max-width: 90%; margin:0 auto; margin-top:10vh; border-radius: calc( 1vw + 5px);">
             hello!
         </div>
     `;
