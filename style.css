@@ -25,3 +25,8 @@ body {
 #cardBox {
     display: flex;
 }
+
+#bv {
+    margin-top: 2vh;
+    font-size: 2vw;
+}
