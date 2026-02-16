@@ -6,22 +6,26 @@ let gaesoo = 3;
 for (i=0;i<gaesoo;i++){
     switch(i){
         case 0:
-            var boxValue = "memoUSB"
-            var boxValue2 = "Usb style memo program"
+            var boxValue = "memoUSB";
+            var boxValue2 = "Usb style memo program";
+            var boxImg = "img1.png";
             break;
         case 1:
             var boxValue = "SQUARE"
             var boxValue2 = "Innovative community"
+            var boxImg = "img2.png";
             break;
         case 2:
             var boxValue = "portfolio page"
             var boxValue2 = "xenonbomin54's portfolio page"
+            var boxImg = "img3.png";
             break;
     }
     let divBox = `
         <div class = "divs">
             <div class="bv">${boxValue}</div>
             <div class="bv2">${boxValue2}</div>
+            <img src="${boxImg}" class="imgs">
         </div>
     `;
     container.insertAdjacentHTML('beforeend', divBox);

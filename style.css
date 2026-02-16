@@ -22,7 +22,7 @@ body {
     width: 50vw;
     background-color:white;
     width: calc(200px + 15vw + 4vh);
-    height: calc(150px + 15vw + 4vh);
+    height: calc(170px + 15vw + 4vh);
     max-width: 90%;
     margin:0 auto;
     margin-top:10vh;
@@ -48,4 +48,9 @@ body {
     font-weight: 500;
     margin-top: 2vh;
     font-size: calc((1vw + 2vh) / 2);
+}
+
+.imgs {
+    margin-top: 3vh;
+    width: calc((15vw + 4vh) / 1.3);
 }
