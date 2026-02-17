@@ -22,3 +22,8 @@ for (i=0;i<gaesoo;i++){
     `;
     container.insertAdjacentHTML('beforeend', divBox);
 }
+
+let cardChangeVar = 0;
+
+window.onkeyleft = (e) => cardChangeVar += 1;
+window.onkeyright = (e) => cardChangeVar -= 1;
