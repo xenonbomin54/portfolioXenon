@@ -17,21 +17,35 @@ body {
     color: white;
 }
 
-#divs {
+.divs {
     background-color: rgb(255, 255, 255);
     width: 50vw;
+    background-color:white;
+    width: calc(200px + 15vw + 4vh);
+    height: calc(150px + 15vw + 4vh);
+    max-width: 90%;
+    margin:0 auto;
+    margin-top:10vh;
+    border-radius: calc( 1vw + 5px);
+    text-align:center;
 }
 
 #cardBox {
     display: flex;
 }
 
-#bv {
-    margin-top: 2vh;
-    font-size: 2vw;
+.bv {
+    margin-top: 3vh;
+    font-size: calc(5px + (2vw + 3vh) / 2);
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
 }
 
-#bv2 {
+.bv2 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
     margin-top: 2vh;
-    font-size: 1vw;
+    font-size: calc((1vw + 2vh) / 2);
 }
