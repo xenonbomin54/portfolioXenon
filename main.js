@@ -1,17 +1,21 @@
 const container = document.getElementById('cardBox');
 
 let i = 0;
-let gaesoo = 2;
+let gaesoo = 3;
 
 for (i=0;i<gaesoo;i++){
     switch(i){
         case 0:
             var boxValue = "memoUSB"
-            var boxValue2 = "usb style memo program"
+            var boxValue2 = "Usb style memo program"
             break;
         case 1:
+            var boxValue = "SQUARE"
+            var boxValue2 = "Innovative community"
+            break;
+        case 2:
             var boxValue = "portfolio page"
-            var boxValue2 = "xenonbomin54 portfolio page"
+            var boxValue2 = "xenonbomin54's portfolio page"
             break;
     }
     let divBox = `
@@ -42,6 +46,13 @@ window.addEventListener('keydown', (e) => {
 });
 
 function cardChangeFunc(){
+    if(isMobile()){
+        console.log("mobile");
+    }
     console.log(cardChangeVar);
+}
+
+function isMobile() {
+    return window.innerWidth < 768;
 }
 
