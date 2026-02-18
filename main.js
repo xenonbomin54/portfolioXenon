@@ -1,7 +1,7 @@
 const container = document.getElementById('cardBox');
 
-let i=0;
-let gaesoo=2;
+let i = 0;
+let gaesoo = 2;
 
 for (i=0;i<gaesoo;i++){
     switch(i){
@@ -25,5 +25,23 @@ for (i=0;i<gaesoo;i++){
 
 let cardChangeVar = 0;
 
-window.onkeyleft = (e) => cardChangeVar += 1;
-window.onkeyright = (e) => cardChangeVar -= 1;
+window.addEventListener('keydown', (e) => {
+    if (e.key === "ArrowLeft") {
+        cardChangeVar += 1;
+        if(cardChangeVar >= gaesoo) {
+            cardChangeVar -= gaesoo;
+        }
+        cardChangeFunc();
+    } else if (e.key === "ArrowRight") {
+        cardChangeVar -= 1;
+        if(cardChangeVar < 0) {
+            cardChangeVar += gaesoo;
+        }
+        cardChangeFunc();
+    }
+});
+
+function cardChangeFunc(){
+    console.log(cardChangeVar);
+}
+
