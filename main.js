@@ -1,28 +1,32 @@
 const container = document.getElementById('cardBox');
+const boxWidth = "(200px + 15vw + 4vh)";
 
 let i = 0;
 let gaesoo = 3;
 
 for (i=0;i<gaesoo;i++){
-    switch(i){
+    switch(i) {
         case 0:
             var boxValue = "memoUSB";
             var boxValue2 = "Usb style memo program";
             var boxImg = "img1.png";
+            var xPos = `calc((100vw - 3 * ${boxWidth}) / 4)`;
             break;
         case 1:
-            var boxValue = "SQUARE"
-            var boxValue2 = "Innovative community"
+            var boxValue = "SQUARE";
+            var boxValue2 = "Innovative community";
             var boxImg = "img2.png";
+            var xPos = `calc(((100vw - 3 * ${boxWidth}) / 4) * 2 + ${boxWidth})`;
             break;
         case 2:
-            var boxValue = "portfolio page"
-            var boxValue2 = "xenonbomin54's portfolio page"
+            var boxValue = "portfolio page";
+            var boxValue2 = "xenonbomin54's portfolio page";
             var boxImg = "img3.png";
+            var xPos = `calc(((100vw - 3 * ${boxWidth}) / 4) * 3 + ${boxWidth} * 2)`;
             break;
     }
     let divBox = `
-        <div class = "divs">
+        <div class = "divs" style="left: ${xPos};">
             <div class="bv">${boxValue}</div>
             <div class="bv2">${boxValue2}</div>
             <img src="${boxImg}" class="imgs">
