@@ -11,22 +11,33 @@ for (i=0;i<gaesoo;i++){
             var boxValue2 = "Usb style memo program";
             var boxImg = "img1.png";
             var xPos = `calc((100vw - 3 * ${boxWidth}) / 4)`;
+            if(!isMobile()){
+                var distortion = "rotateY(20deg)";
+            }else {
+                var distortion = "rotateX(20deg)";
+            }
             break;
         case 1:
             var boxValue = "SQUARE";
             var boxValue2 = "Innovative community";
             var boxImg = "img2.png";
             var xPos = `calc(((100vw - 3 * ${boxWidth}) / 4) * 2 + ${boxWidth})`;
+            var distortion = "skew(0deg, 0deg)";
             break;
         case 2:
             var boxValue = "portfolio page";
             var boxValue2 = "xenonbomin54's portfolio page";
             var boxImg = "img3.png";
             var xPos = `calc(((100vw - 3 * ${boxWidth}) / 4) * 3 + ${boxWidth} * 2)`;
+            if(!isMobile()){
+                var distortion = "rotateY(-20deg)";
+            }else {
+                var distortion = "rotateX(-20deg)";
+            }
             break;
     }
     let divBox = `
-        <div class = "divs" style="left: ${xPos};">
+        <div class = "divs" style="left: ${xPos};transform: perspective(1000px) ${distortion};">
             <div class="bv">${boxValue}</div>
             <div class="bv2">${boxValue2}</div>
             <img src="${boxImg}" class="imgs">
