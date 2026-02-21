@@ -64,7 +64,6 @@ window.addEventListener('keydown', (e) => {
     }
 });
 
-
 function cardChangeFunc(){
         if(cardChangeVar === 1) {
             if(!isMobile()){
