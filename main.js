@@ -64,13 +64,13 @@ if(!isMobile()){
 let cardChangeVar = 1;
 
 window.addEventListener('keydown', (e) => {
-    if (e.key === "ArrowRight") {
+    if (e.key === "ArrowLeft") {
         cardChangeVar += 1;
         if(cardChangeVar >= gaesoo) {
             cardChangeVar -= gaesoo;
         }
         cardChangeFunc();
-    } else if (e.key === "ArrowLeft") {
+    } else if (e.key === "ArrowRight") {
         cardChangeVar -= 1;
         if(cardChangeVar < 0) {
             cardChangeVar += gaesoo;
