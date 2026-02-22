@@ -69,8 +69,11 @@ function cardChangeFunc(){
         if(cardChangeVar === 1) {
             if(!isMobile()){
             document.getElementById("div0").style.transform = "perspective(1000px) rotateY(20deg)";
+            document.getElementById("div0").style.filter = "brightness(50%) blur(2px)";
             document.getElementById("div1").style.transform = "skew(0deg, 0deg)";
+            document.getElementById("div1").style.filter = "brightness(100%) blur(0px)";
             document.getElementById("div2").style.transform = "perspective(1000px) rotateY(-20deg)";
+            document.getElementById("div2").style.filter = "brightness(50%) blur(2px)";
             document.getElementById("div0").style.left = `calc((100vw - 3 * ${boxWidth}) / 4)`;
             document.getElementById("div1").style.left = `calc(((100vw - 3 * ${boxWidth}) / 4) * 2 + ${boxWidth})`; 
             document.getElementById("div2").style.left = `calc(((100vw - 3 * ${boxWidth}) / 4) * 3 + ${boxWidth} * 2)`;
@@ -81,10 +84,13 @@ function cardChangeFunc(){
             }
         } else if(cardChangeVar === 2) {
             if(!isMobile()){
-            document.getElementById("div2").style.transform = "perspective(1000px) rotateY(20deg)";
+            document.getElementById("div2").style.transform = "perspective(1000px) rotateY(-40deg)";
+            document.getElementById("div2").style.filter = "brightness(50%) blur(5px)";
             document.getElementById("div0").style.transform = "skew(0deg, 0deg)";
+            document.getElementById("div0").style.filter = "brightness(100%) blur(0px)";
             document.getElementById("div1").style.transform = "perspective(1000px) rotateY(-20deg)";
-            document.getElementById("div2").style.left = `calc((100vw - 3 * ${boxWidth}) / 4)`;
+            document.getElementById("div1").style.filter = "brightness(50%) blur(2px)";
+            document.getElementById("div2").style.left = `calc(((100vw - 3 * ${boxWidth}) / 4) * 3 + ${boxWidth} * 2.84)`;
             document.getElementById("div0").style.left = `calc(((100vw - 3 * ${boxWidth}) / 4) * 2 + ${boxWidth})`; 
             document.getElementById("div1").style.left = `calc(((100vw - 3 * ${boxWidth}) / 4) * 3 + ${boxWidth} * 2)`;
             } else {
@@ -95,11 +101,14 @@ function cardChangeFunc(){
         } else if(cardChangeVar === 0) {
             if(!isMobile()){
             document.getElementById("div1").style.transform = "perspective(1000px) rotateY(20deg)";
+            document.getElementById("div1").style.filter = "brightness(50%) blur(2px)";
             document.getElementById("div2").style.transform = "skew(0deg, 0deg)";
-            document.getElementById("div0").style.transform = "perspective(1000px) rotateY(-20deg)";
+            document.getElementById("div2").style.filter = "brightness(100%) blur(0px)";
+            document.getElementById("div0").style.transform = "perspective(1000px) rotateY(40deg)";
+            document.getElementById("div0").style.filter = "brightness(50%) blur(5px)";
             document.getElementById("div1").style.left = `calc((100vw - 3 * ${boxWidth}) / 4)`;
             document.getElementById("div2").style.left = `calc(((100vw - 3 * ${boxWidth}) / 4) * 2 + ${boxWidth})`; 
-            document.getElementById("div0").style.left = `calc(((100vw - 3 * ${boxWidth}) / 4) * 3 + ${boxWidth} * 2)`;
+            document.getElementById("div0").style.left = `calc(((100vw - 3 * ${boxWidth}) / 4) * 2 - ${boxWidth})`;
             } else {
             document.getElementById("div1").style.transform = "perspective(1000px) rotateX(20deg)";
             document.getElementById("div2").style.transform = "skew(0deg, 0deg)";
