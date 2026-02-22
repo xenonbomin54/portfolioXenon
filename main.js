@@ -37,7 +37,7 @@ for (i=0;i<gaesoo;i++){
             break;
     }
     let divBox = `
-        <div class = "divs" style="left: ${xPos};transform: perspective(1000px) ${distortion};">
+        <div class = "divs" style="left: ${xPos};transform: perspective(1000px) ${distortion};" id="div${i}">
             <div class="bv">${boxValue}</div>
             <div class="bv2">${boxValue2}</div>
             <img src="${boxImg}" class="imgs">
@@ -46,7 +46,7 @@ for (i=0;i<gaesoo;i++){
     container.insertAdjacentHTML('beforeend', divBox);
 }
 
-let cardChangeVar = 0;
+let cardChangeVar = 1;
 
 window.addEventListener('keydown', (e) => {
     if (e.key === "ArrowLeft") {
@@ -64,10 +64,42 @@ window.addEventListener('keydown', (e) => {
     }
 });
 
+
 function cardChangeFunc(){
-    if(isMobile()){
-        console.log("mobile");
-    }
+        if(cardChangeVar === 1) {
+            if(!isMobile()){
+            document.getElementById("div0").style.transform = "perspective(1000px) rotateY(20deg)";
+            document.getElementById("div1").style.transform = "skew(0deg, 0deg)";
+            document.getElementById("div2").style.transform = "perspective(1000px) rotateY(-20deg)";
+            document.getElementById("div0").style.transform = "perspective(1000px) rotateY(20deg)";
+            document.getElementById("div1").style.transform = "skew(0deg, 0deg)";
+            document.getElementById("div2").style.transform = "perspective(1000px) rotateY(-20deg)";
+            } else {
+            document.getElementById("div0").style.transform = "perspective(1000px) rotateX(20deg)";
+            document.getElementById("div1").style.transform = "skew(0deg, 0deg)";
+            document.getElementById("div2").style.transform = "perspective(1000px) rotateX(-20deg)";
+            }
+        } else if(cardChangeVar === 2) {
+            if(!isMobile()){
+            document.getElementById("div2").style.transform = "perspective(1000px) rotateY(-40deg)";
+            document.getElementById("div0").style.transform = "skew(0deg, 0deg)";
+            document.getElementById("div1").style.transform = "perspective(1000px) rotateY(-20deg)";
+            } else {
+            document.getElementById("div2").style.transform = "perspective(1000px) rotateX(20deg)";
+            document.getElementById("div0").style.transform = "skew(0deg, 0deg)";
+            document.getElementById("div1").style.transform = "perspective(1000px) rotateX(-20deg)";
+            }
+        } else if(cardChangeVar === 0) {
+            if(!isMobile()){
+            document.getElementById("div1").style.transform = "perspective(1000px) rotateY(20deg)";
+            document.getElementById("div2").style.transform = "skew(0deg, 0deg)";
+            document.getElementById("div0").style.transform = "perspective(1000px) rotateY(40deg)";
+            } else {
+            document.getElementById("div1").style.transform = "perspective(1000px) rotateX(20deg)";
+            document.getElementById("div2").style.transform = "skew(0deg, 0deg)";
+            document.getElementById("div0").style.transform = "perspective(1000px)rotateX(-20deg)";
+            }
+        }
     console.log(cardChangeVar);
 }
 
