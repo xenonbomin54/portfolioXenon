@@ -80,11 +80,15 @@ window.addEventListener('keydown', (e) => {
 });
 
 function cardChangeFunc(){
+        document.getElementById("indicator1").style.backgroundColor = "rgb(131, 131, 131)";
+        document.getElementById("indicator2").style.backgroundColor = "rgb(131, 131, 131)";
+        document.getElementById("indicator3").style.backgroundColor = "rgb(131, 131, 131)";
         if(cardChangeVar === 1) {
             if(!isMobile()){
             document.getElementById("div0").style.transform = "perspective(1000px) rotateY(20deg)";
             document.getElementById("div0").style.filter = "brightness(50%) blur(2px)";
             document.getElementById("div1").style.transform = "skew(0deg, 0deg)";
+            document.getElementById("indicator2").style.backgroundColor = "rgb(255, 255, 255)";
             document.getElementById("div1").style.filter = "brightness(100%) blur(0px)";
             document.getElementById("div2").style.transform = "perspective(1000px) rotateY(-20deg)";
             document.getElementById("div2").style.filter = "brightness(50%) blur(2px)";
@@ -101,6 +105,7 @@ function cardChangeFunc(){
             document.getElementById("div2").style.transform = "perspective(1000px) rotateY(-40deg)";
             document.getElementById("div2").style.filter = "brightness(50%) blur(5px)";
             document.getElementById("div0").style.transform = "skew(0deg, 0deg)";
+            document.getElementById("indicator1").style.backgroundColor = "rgb(255, 255, 255)";
             document.getElementById("div0").style.filter = "brightness(100%) blur(0px)";
             document.getElementById("div1").style.transform = "perspective(1000px) rotateY(-20deg)";
             document.getElementById("div1").style.filter = "brightness(50%) blur(2px)";
@@ -117,6 +122,7 @@ function cardChangeFunc(){
             document.getElementById("div1").style.transform = "perspective(1000px) rotateY(20deg)";
             document.getElementById("div1").style.filter = "brightness(50%) blur(2px)";
             document.getElementById("div2").style.transform = "skew(0deg, 0deg)";
+            document.getElementById("indicator3").style.backgroundColor = "rgb(255, 255, 255)";
             document.getElementById("div2").style.filter = "brightness(100%) blur(0px)";
             document.getElementById("div0").style.transform = "perspective(1000px) rotateY(40deg)";
             document.getElementById("div0").style.filter = "brightness(50%) blur(5px)";

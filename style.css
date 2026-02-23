@@ -30,7 +30,7 @@ body {
     border-radius: calc( 1vw + 5px);
     text-align:center;
     position: absolute;
-    transition: 0.5s;
+    transition: 0.5s ease;
 }
 
 #cardBox {
@@ -59,4 +59,23 @@ body {
 .imgs {
     margin-top: 3vh;
     width: calc((15vw + 4vh) / 1.3);
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(131, 131, 131);
+    border-radius: 50%;
+    margin: 0 20px;
+    transition: background-color 0.5s ease;
+}
+
+#indicator2 {
+    background-color: rgb(255, 255, 255);
+}
+
+#indBox {
+    display: flex;
+    justify-content: center;
+    margin-top: 75vh;
 }
