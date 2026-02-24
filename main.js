@@ -1,7 +1,15 @@
 const container = document.getElementById('cardBox');
 const boxWidth = "(200px + 15vw + 4vh)";
-const boxHeight = "(170px + 15vw + 4vh)";
 
+function isMobile() {
+    return window.innerWidth < 768;
+}
+
+if(!isMobile()) {
+    const boxHeight = "(170px + 15vw + 4vh)";
+} else {
+    const boxHeight = "(170px + 4vh)";
+}
 let i = 0;
 let gaesoo = 3;
 
@@ -165,9 +173,5 @@ function cardChangeFunc(){
             }
         }
     console.log(cardChangeVar);
-}
-
-function isMobile() {
-    return window.innerWidth < 768;
 }
 
