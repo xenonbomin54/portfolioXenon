@@ -8,7 +8,7 @@ function isMobile() {
 if(!isMobile()) {
     const boxHeight = "(170px + 15vw + 4vh)";
 } else {
-    const boxHeight = "(170px + 4vh)";
+    const boxHeight = "(100px + 4vh)";
 }
 let i = 0;
 let gaesoo = 3;
