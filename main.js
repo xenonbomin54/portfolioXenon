@@ -1,15 +1,12 @@
 const container = document.getElementById('cardBox');
-const boxWidth = "(200px + 15vw + 4vh)";
 
 function isMobile() {
     return window.innerWidth < 768;
 }
 
-if(!isMobile()) {
-    const boxHeight = "(170px + 15vw + 4vh)";
-} else {
-    const boxHeight = "(100px + 4vh)";
-}
+const boxWidth = "200px + 15vw + 4vh";
+const boxHeight = isMobile() ? "100px + 4vh" : "170px + 15vw + 4vh";
+
 let i = 0;
 let gaesoo = 3;
 
@@ -65,13 +62,15 @@ if(!isMobile()){
                 document.getElementById("div1").style.left = `calc(((100vw - 3 * ${boxWidth}) / 4) * 2 + ${boxWidth})`; 
                 document.getElementById("div2").style.left = `calc(((100vw - 3 * ${boxWidth}) / 4) * 3 + ${boxWidth} * 2)`;
             } else {
-                document.getElementById("div0").style.transform = "perspective(1000px) rotateX(20deg)";
+                document.getElementById("div0").style.transform = "perspective(1000px) rotateX(20deg) translateX(-50%)";
                 document.getElementById("div0").style.filter = "brightness(50%) blur(2px)";
-                document.getElementById("div1").style.transform = "skew(0deg, 0deg)";
+                document.getElementById("div0").style.left = "50%";
+                document.getElementById("div1").style.transform = "skew(0deg, 0deg) translateX(-50%)";
+                document.getElementById("div1").style.left = "50%";
                 document.getElementById("indicator2").style.backgroundColor = "rgb(255, 255, 255)";
                 document.getElementById("div1").style.filter = "brightness(100%) blur(0px)";
-                document.getElementById("div2").style.transform = "perspective(1000px) rotateX(-20deg)";
-                document.getElementById("div2").style.filter = "brightness(50%) blur(2px)";
+                document.getElementById("div2").style.transform = "perspective(1000px) rotateX(-20deg) translateX(-50%)";
+                document.getElementById("div2").style.left = "50%";
                 document.getElementById("div0").style.top = `calc((100vw - 3 * ${boxHeight}) / 4)`;
                 document.getElementById("div1").style.top = `calc(((100vw - 3 * ${boxHeight}) / 4) * 2 + ${boxHeight})`; 
                 document.getElementById("div2").style.top = `calc(((100vw - 3 * ${boxHeight}) / 4) * 3 + ${boxHeight} * 2)`;
@@ -112,15 +111,18 @@ function cardChangeFunc(){
                 document.getElementById("div1").style.left = `calc(((100vw - 3 * ${boxWidth}) / 4) * 2 + ${boxWidth})`; 
                 document.getElementById("div2").style.left = `calc(((100vw - 3 * ${boxWidth}) / 4) * 3 + ${boxWidth} * 2)`;
             } else {
-                document.getElementById("div0").style.transform = "perspective(1000px) rotateX(20deg)";
+                document.getElementById("div0").style.transform = "perspective(1000px) rotateX(20deg) translateX(-50%)";
                 document.getElementById("div0").style.filter = "brightness(50%) blur(2px)";
-                document.getElementById("div1").style.transform = "skew(0deg, 0deg)";
+                document.getElementById("div0").style.left = "50%";
+                document.getElementById("div1").style.transform = "skew(0deg, 0deg) translateX(-50%)";
+                document.getElementById("div1").style.left = "50%";
                 document.getElementById("indicator2").style.backgroundColor = "rgb(255, 255, 255)";
                 document.getElementById("div1").style.filter = "brightness(100%) blur(0px)";
-                document.getElementById("div2").style.transform = "perspective(1000px) rotateX(-20deg)";
+                document.getElementById("div2").style.transform = "perspective(1000px) rotateX(-20deg) translateX(-50%)";
+                document.getElementById("div2").style.left = "50%";
                 document.getElementById("div2").style.filter = "brightness(50%) blur(2px)";
                 document.getElementById("div0").style.top = `calc((100vw - 3 * ${boxHeight}) / 4)`;
-                document.getElementById("div1").style.top = `calc(((100vw - 3 * ${boxHeight}) / 4) * 2 + ${boxHeight})`; 
+                document.getElementById("div1").style.top = `calc(((100vw - 3 * ${boxHeight}) / 4) * 2 + ${boxHeight})`;
                 document.getElementById("div2").style.top = `calc(((100vw - 3 * ${boxHeight}) / 4) * 3 + ${boxHeight} * 2)`;
             }
         } else if(cardChangeVar === 2) {
@@ -136,15 +138,18 @@ function cardChangeFunc(){
                 document.getElementById("div0").style.left = `calc(((100vw - 3 * ${boxWidth}) / 4) * 2 + ${boxWidth})`; 
                 document.getElementById("div1").style.left = `calc(((100vw - 3 * ${boxWidth}) / 4) * 3 + ${boxWidth} * 2)`;
             } else {
-                document.getElementById("div2").style.transform = "perspective(1000px) rotateX(-40deg)";
+                document.getElementById("div2").style.transform = "perspective(1000px) rotateX(-40deg) translateX(-50%)";
+                document.getElementById("div2").style.left = "50%";
                 document.getElementById("div2").style.filter = "brightness(50%) blur(5px)";
-                document.getElementById("div0").style.transform = "skew(0deg, 0deg)";
+                document.getElementById("div0").style.transform = "skew(0deg, 0deg) translateX(-50%)";
+                document.getElementById("div0").style.left = "50%";
                 document.getElementById("indicator1").style.backgroundColor = "rgb(255, 255, 255)";
                 document.getElementById("div0").style.filter = "brightness(100%) blur(0px)";
-                document.getElementById("div1").style.transform = "perspective(1000px) rotateX(-20deg)";
+                document.getElementById("div1").style.transform = "perspective(1000px) rotateX(-20deg) translateX(-50%)";
+                document.getElementById("div1").style.left = "50%";
                 document.getElementById("div1").style.filter = "brightness(50%) blur(2px)";
                 document.getElementById("div2").style.top = `calc((100vw - 3 * ${boxHeight}) / 4)`;
-                document.getElementById("div0").style.top = `calc(((100vw - 3 * ${boxHeight}) / 4) * 2 + ${boxHeight})`; 
+                document.getElementById("div0").style.top = `calc(((100vw - 3 * ${boxHeight}) / 4) * 2 + ${boxHeight})`;
                 document.getElementById("div1").style.top = `calc(((100vw - 3 * ${boxHeight}) / 4) * 3 + ${boxHeight} * 2)`;
             }
         } else if(cardChangeVar === 0) {
@@ -160,15 +165,18 @@ function cardChangeFunc(){
                 document.getElementById("div2").style.left = `calc(((100vw - 3 * ${boxWidth}) / 4) * 2 + ${boxWidth})`; 
                 document.getElementById("div0").style.left = `calc(((100vw - 3 * ${boxWidth}) / 4) * 2 - ${boxWidth})`;
             } else {
-                document.getElementById("div1").style.transform = "perspective(1000px) rotateX(20deg)";
+                document.getElementById("div1").style.transform = "perspective(1000px) rotateX(20deg) translateX(-50%)";
+                document.getElementById("div1").style.left = "50%";
                 document.getElementById("div1").style.filter = "brightness(50%) blur(2px)";
-                document.getElementById("div2").style.transform = "skew(0deg, 0deg)";
+                document.getElementById("div2").style.transform = "skew(0deg, 0deg) translateX(-50%)";
+                document.getElementById("div2").style.left = "50%";
                 document.getElementById("indicator3").style.backgroundColor = "rgb(255, 255, 255)";
                 document.getElementById("div2").style.filter = "brightness(100%) blur(0px)";
-                document.getElementById("div0").style.transform = "perspective(1000px) rotateX(40deg)";
+                document.getElementById("div0").style.transform = "perspective(1000px) rotateX(40deg) translateX(-50%)";
+                document.getElementById("div0").style.left = "50%";
                 document.getElementById("div0").style.filter = "brightness(50%) blur(5px)";
                 document.getElementById("div1").style.top = `calc((100vw - 3 * ${boxHeight}) / 4)`;
-                document.getElementById("div2").style.top = `calc(((100vw - 3 * ${boxHeight}) / 4) * 2 + ${boxHeight})`; 
+                document.getElementById("div2").style.top = `calc(((100vw - 3 * ${boxHeight}) / 4) * 2 + ${boxHeight})`;
                 document.getElementById("div0").style.top = `calc(((100vw - 3 * ${boxHeight}) / 4) * 3 + ${boxHeight} * 2)`;
             }
         }
