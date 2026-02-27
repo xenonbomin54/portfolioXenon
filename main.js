@@ -4,7 +4,7 @@ function isMobile() {
     return window.innerWidth < 768;
 }
 
-const boxWidth = "200px + 15vw + 4vh";
+const boxWidth = "(200px + 15vw + 4vh)";
 const boxHeight = isMobile() ? "(1.5vw + 4vh)" : "(15vw + 4vh)";
 
 let i = 0;
@@ -55,7 +55,6 @@ for (i=0;i<gaesoo;i++){
 document.getElementById("div0").style.height = boxHeight;
 document.getElementById("div1").style.height = boxHeight;
 document.getElementById("div2").style.height = boxHeight;
-
 
 if(!isMobile()){
                 document.getElementById("div0").style.transform = "perspective(1000px) rotateY(20deg)";
