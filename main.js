@@ -4,6 +4,10 @@ function isMobile() {
     return window.innerWidth < 768;
 }
 
+if(isMobile()) {
+    document.getElementById("indBox").style.display = "none";
+}
+
 const boxWidth = "(200px + 15vw + 4vh)";
 const boxHeight = "(15vw + 4vh)";
 
