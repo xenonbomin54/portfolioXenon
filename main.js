@@ -5,7 +5,7 @@ function isMobile() {
 }
 
 const boxWidth = "(200px + 15vw + 4vh)";
-const boxHeight = isMobile() ? "(1.5vw + 4vh)" : "(15vw + 4vh)";
+const boxHeight = "(15vw + 4vh)";
 
 let i = 0;
 let gaesoo = 3;
@@ -76,6 +76,7 @@ if(!isMobile()){
                 document.getElementById("div1").style.filter = "brightness(100%) blur(0px)";
                 document.getElementById("div2").style.transform = "perspective(1000px) rotateX(-20deg) translateX(-50%)";
                 document.getElementById("div2").style.left = "50%";
+                document.getElementById("div2").style.filter = "brightness(50%) blur(2px)";
                 document.getElementById("div0").style.top = `calc((100vh - 3 * ${boxHeight}) / 4)`;
                 document.getElementById("div1").style.top = `calc(((100vh - 3 * ${boxHeight}) / 4) * 2 + ${boxHeight})`; 
                 document.getElementById("div2").style.top = `calc(((100vh - 3 * ${boxHeight}) / 4) * 3 + ${boxHeight} * 2)`;
@@ -131,6 +132,7 @@ function cardChangeFunc(){
                 document.getElementById("div2").style.top = `calc(((100vh - 3 * ${boxHeight}) / 4) * 3 + ${boxHeight} * 2)`;
             }
         } else if(cardChangeVar === 2) {
+            //0이 focused, 0,1,2순
             if(!isMobile()){
                 document.getElementById("div2").style.transform = "perspective(1000px) rotateY(-40deg)";
                 document.getElementById("div2").style.filter = "brightness(50%) blur(5px)";
@@ -153,11 +155,12 @@ function cardChangeFunc(){
                 document.getElementById("div1").style.transform = "perspective(1000px) rotateX(-20deg) translateX(-50%)";
                 document.getElementById("div1").style.left = "50%";
                 document.getElementById("div1").style.filter = "brightness(50%) blur(2px)";
-                document.getElementById("div2").style.top = `calc((100vh - 3 * ${boxHeight}) / 4)`;
+                document.getElementById("div2").style.top = `calc(((100vh - 3 * ${boxHeight}) / 4) * 3 + ${boxHeight} * 3)`;
                 document.getElementById("div0").style.top = `calc(((100vh - 3 * ${boxHeight}) / 4) * 2 + ${boxHeight})`;
                 document.getElementById("div1").style.top = `calc(((100vh - 3 * ${boxHeight}) / 4) * 3 + ${boxHeight} * 2)`;
             }
         } else if(cardChangeVar === 0) {
+            //2가 foucsed, 0,1,2순
             if(!isMobile()){
                 document.getElementById("div1").style.transform = "perspective(1000px) rotateY(20deg)";
                 document.getElementById("div1").style.filter = "brightness(50%) blur(2px)";
@@ -182,7 +185,7 @@ function cardChangeFunc(){
                 document.getElementById("div0").style.filter = "brightness(50%) blur(5px)";
                 document.getElementById("div1").style.top = `calc((100vh - 3 * ${boxHeight}) / 4)`;
                 document.getElementById("div2").style.top = `calc(((100vh - 3 * ${boxHeight}) / 4) * 2 + ${boxHeight})`;
-                document.getElementById("div0").style.top = `calc(((100vh - 3 * ${boxHeight}) / 4) * 3 + ${boxHeight} * 2)`;
+                document.getElementById("div0").style.top = `0px`;
             }
         }
     console.log(cardChangeVar);
