@@ -3,11 +3,6 @@ const container = document.getElementById('cardBox');
 function isMobile() {
     return window.innerWidth < 768;
 }
-
-if(isMobile()) {
-    document.getElementById("indBox").style.display = "none";
-}
-
 const boxWidth = "(200px + 15vw + 4vh)";
 const boxHeight = "(15vw + 4vh)";
 
@@ -54,6 +49,11 @@ for (i=0;i<gaesoo;i++){
         </div>
     `;
     container.insertAdjacentHTML('beforeend', divBox);
+}
+
+if(isMobile()) {
+    document.getElementById("indBox").style.display = "none";
+    document.getElementById("cardBox").style.marginTop= "-10vh";
 }
 
 document.getElementById("div0").style.height = boxHeight;
