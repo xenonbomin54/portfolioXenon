@@ -5,8 +5,16 @@ body {
 }
 
 #topDiv{
-    background-color: rgb(29, 29, 29);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
     padding: calc((2vw + 3vh) / 4);
+    background-color: rgb(29, 29, 29);
+    z-index: 1000;
 }
 
 #mTitle {
