@@ -4,7 +4,7 @@ function isMobile() {
     return window.innerWidth < 768;
 }
 const boxWidth = "(200px + 15vw + 4vh)";
-const boxHeight = "(15vw + 4vh)";
+const boxHeight = "(170px + 15vw + 4vh)";
 
 let i = 0;
 let gaesoo = 3;
