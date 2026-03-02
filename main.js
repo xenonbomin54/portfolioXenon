@@ -54,6 +54,8 @@ for (i=0;i<gaesoo;i++){
 if(isMobile()) {
     document.getElementById("indBox").style.display = "none";
     document.getElementById("cardBox").style.marginTop= "-10vh";
+} else {
+    document.getElementById("cardBox").style.marginTop= "20vh";
 }
 
 document.getElementById("div0").style.height = boxHeight;
