@@ -218,4 +218,25 @@ if(isMobile()) {
         }
         cardChangeFunc();
     });
+} else {
+    const cardBox = document.getElementById('cardBox');
+    const hammer = new Hammer(cardBox);
+    
+    hammer.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+    
+    hammer.on('swiperight', function() {
+        cardChangeVar += 1;
+        if(cardChangeVar >= gaesoo) {
+            cardChangeVar -= gaesoo;
+        }
+        cardChangeFunc();
+    });
+    
+    hammer.on('swipeleft', function() {
+        cardChangeVar -= 1;
+        if(cardChangeVar < 0) {
+            cardChangeVar += gaesoo;
+        }
+        cardChangeFunc();
+    });
 }
