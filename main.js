@@ -197,3 +197,25 @@ function cardChangeFunc(){
     console.log(cardChangeVar);
 }
 
+if(isMobile()) {
+    const cardBox = document.getElementById('cardBox');
+    const hammer = new Hammer(cardBox);
+    
+    hammer.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+    
+    hammer.on('swipedown', function() {
+        cardChangeVar += 1;
+        if(cardChangeVar >= gaesoo) {
+            cardChangeVar -= gaesoo;
+        }
+        cardChangeFunc();
+    });
+    
+    hammer.on('swipeup', function() {
+        cardChangeVar -= 1;
+        if(cardChangeVar < 0) {
+            cardChangeVar += gaesoo;
+        }
+        cardChangeFunc();
+    });
+}
